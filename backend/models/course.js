@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const courseSchema = new mongoose.Schema({
     courseName: { type: String, require: true },
     lecturerName: { type: String, require: true },
-    credits: { type: Number, require: true },
+    credits: { type: Number, require: true, min: 3, max: 5 },
     maxStudents: { type: Number, require: true },
     currentNumOfStudents: { type: Number, require: true },
     students: [
